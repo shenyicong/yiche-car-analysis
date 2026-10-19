@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>易车网车型数据可视化分析</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0a0e17; color:#c9d1d9; font-family:"Microsoft YaHei",sans-serif; padding:40px 16px; }
+  .wrap { max-width:1080px; margin:0 auto; }
+  h1 { text-align:center; font-size:26px; color:#fff; margin-bottom:8px; }
+  .sub { text-align:center; color:#5f7b9e; font-size:13px; letter-spacing:2px; margin-bottom:28px; }
+  .flow { text-align:center; font-size:14px; color:#00f0ff; margin-bottom:34px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  figure { background:#111827; border:1px solid #1f2a3d; border-radius:10px; padding:14px; }
+  figure.wide { grid-column:1 / -1; }
+  img { width:100%; border-radius:6px; display:block; }
+  figcaption { text-align:center; font-size:13px; color:#8b9bb4; margin-top:10px; }
+  .back { display:block; text-align:center; margin:36px auto 0; color:#00f0ff; text-decoration:none;
+          border:1px solid rgba(0,240,255,.4); border-radius:999px; padding:10px 26px; width:max-content; }
+  .back:hover { background:rgba(0,240,255,.08); }
+  @media (max-width:720px){ .grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>易车网车型数据可视化分析</h1>
+  <div class="sub">Python 爬虫 · Pandas 清洗 · Matplotlib 可视化</div>
+  <div class="flow">5322 条原始记录 → 2651 缺失值处理 → 2651 异常值处理 → 2436 条清洁数据 → 10 张多维分析图</div>
+  <div class="grid">
+    <figure class="wide"><img src="charts/10_dashboard.png" alt="总览 Dashboard"><figcaption>总览 Dashboard：5322 条原始记录 → 2436 条清洁数据 → 10 张图</figcaption></figure>
+    <figure class="wide"><img src="00_preprocess_comparison.png" alt="数据预处理对比"><figcaption>缺失值 / 异常值 / 重复值 三步预处理前后对比</figcaption></figure>
+    <figure><img src="charts/01_brand_count.png" alt="车型数量 Top10 品牌"><figcaption>车型数量 Top 10 品牌</figcaption></figure>
+    <figure><img src="charts/02_brand_avg_price.png" alt="品牌均价"><figcaption>品牌平均价格对比</figcaption></figure>
+    <figure><img src="charts/03_price_level_pie.png" alt="价格区间分布"><figcaption>价格区间分布</figcaption></figure>
+    <figure><img src="charts/04_energy_type.png" alt="能源类型"><figcaption>能源类型占比</figcaption></figure>
+    <figure><img src="charts/05_level_price.png" alt="级别与价格"><figcaption>车型级别与价格</figcaption></figure>
+    <figure><img src="charts/06_price_kde.png" alt="价格 KDE"><figcaption>价格分布核密度估计</figcaption></figure>
+    <figure><img src="charts/07_energy_box.png" alt="能源价格箱线"><figcaption>各能源类型价格箱线图</figcaption></figure>
+    <figure><img src="charts/08_brand_bubble.png" alt="品牌气泡图"><figcaption>品牌数量 - 均价气泡图</figcaption></figure>
+    <figure><img src="charts/09_level2_heatmap.png" alt="热力图"><figcaption>级别 × 能源 交叉热力图</figcaption></figure>
+  </div>
+  <a class="back" href="https://github.com/shenyicong/yiche-car-analysis">⭐ 查看源码仓库</a>
+</div>
+</body>
+</html>
