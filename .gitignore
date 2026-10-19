@@ -1,0 +1,17 @@
+# 运行产物
+yiche_output/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 凭证（切勿提交）
+.env
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
